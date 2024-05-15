@@ -1,5 +1,6 @@
 import Aside from "./components/Aside";
 import NavBar from "./components/NavBar";
+import { ThemeProvider } from "@/app/admin/Theme"
 
 export default function AdminLayout({
     children,
@@ -9,6 +10,12 @@ export default function AdminLayout({
     return (
         <html lang="en">
             <body className="">
+            <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >            
                 <div>
                    <NavBar/>
                 <div className="flex">
@@ -16,6 +23,7 @@ export default function AdminLayout({
                     {children}
                 </div> 
                 </div>
+                </ThemeProvider>
             </body>
         </html>
     );
