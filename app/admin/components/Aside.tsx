@@ -19,7 +19,7 @@ export default function Aside({ className }: any) {
                         Estudante
                     </Button>
                 </a>
-                <a href="/admin/course">
+                <a href="/admin/courses">
                     <Button variant="ghost">
                         <MailCheck className="mr-2" />
                         Curso
